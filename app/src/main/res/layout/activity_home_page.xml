@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="75dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back"
+                    android:textColor="#807D7D" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ComicsHub"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".HomePage">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:queryHint="@string/search_for_products"
+                    android:iconifiedByDefault="false"
+                    android:padding="8dp" />
+
+            </LinearLayout>
+
+
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:backgroundTint="@color/black"
+                    android:background="@color/white">
+
+                    <ImageView
+                        android:id="@+id/promotional_image2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/promotion"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/promotion" />
+
+                    <ImageView
+                        android:id="@+id/second_promotional_image3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_toEndOf="@id/promotional_image2"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="promotions"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/one" />
+                    <ImageView
+                        android:id="@+id/second_promotional_image1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_toEndOf="@id/second_promotional_image3"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="promotions"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/one" />
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/genre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="Genre/Category" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:background="@android:color/white">
+
+                <LinearLayout
+                    style="?android:attr/buttonBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/category_all"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:text="@string/all"
+                        android:textColor="#FF9800"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/horror"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:textColor="#FF9800"
+                        android:text="Horror"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/fantasy"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:backgroundTint="@color/black"
+                        android:text="Fantasy"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/comedy"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:textColor="#FF9800"
+                        android:text="Comedy"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/adult"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:backgroundTint="@color/black"
+                        android:text="Adult"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/romance"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:textColor="#FF9800"
+                        android:text="Romance"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/Adventure"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FF9800"
+                        android:backgroundTint="@color/black"
+                        android:text="Adventure"
+                        android:padding="8dp" />
+
+                    <Button
+                        android:id="@+id/Sports"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sports "
+                        android:textColor="#FF9800"
+                        android:backgroundTint="@color/black"
+                        android:padding="8dp" />
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="@string/recommendation" />
+            </LinearLayout>
+
+
+
+            <!-- Product List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/onepieceCardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="347dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="onepiecee">
+
+                        <ImageView
+                            android:id="@+id/onepiececover"
+                            android:layout_width="164dp"
+                            android:layout_height="164dp"
+                            android:background="#FDFDFD"
+                            android:contentDescription="@string/asdsa01123"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/one"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/onepieceWishlist"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:contentDescription="@string/wishlist"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.095"
+                            app:srcCompat="@drawable/btn_3"
+                            app:tint="@color/black"
+                            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/onepiecePrice"
+                            android:layout_width="71dp"
+                            android:layout_height="39dp"
+                            android:contentDescription="@string/pricetxt"
+                            android:text="$69"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.614"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.081"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                        <TextView
+                            android:id="@+id/onepiece"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+
+                            android:text="Title:bleach"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.322"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/onepieceDescription"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/titletxt"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="It follows the adventures of a teenager Ichigo Kurosaki, who obtains the powers of a Soul Reaper—a death personification similar to a Grim Reaper—from another Soul Reaper, Rukia Kuchiki"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.953"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.904"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bleachCardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="347dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/bleach">
+
+                        <ImageView
+                            android:id="@+id/pic2"
+                            android:layout_width="164dp"
+                            android:layout_height="164dp"
+                            android:background="#FDFDFD"
+                            android:contentDescription="@string/asdsa01123"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/bleach"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/imageView42"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:contentDescription="@string/wishlist"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.095"
+                            app:srcCompat="@drawable/btn_3"
+                            app:tint="@color/black"
+                            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/priceTxt2"
+                            android:layout_width="71dp"
+                            android:layout_height="39dp"
+                            android:contentDescription="@string/pricetxt"
+                            android:text="$69"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.614"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.081"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                        <TextView
+                            android:id="@+id/titleTxt4"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+
+                            android:text="@string/title_bleach"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.322"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/bleachDescription"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/titletxt"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="It follows the adventures of a teenager Ichigo Kurosaki, who obtains the powers of a Soul Reaper—a death personification similar to a Grim Reaper—from another Soul Reaper, Rukia Kuchiki"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.953"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.904"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/berserkCardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="347dp"
+                        android:layout_height="180dp"
+                        android:layout_gravity="bottom"
+                        android:layout_margin="8dp"
+                        android:contentDescription="@string/bleach">
+
+                        <ImageView
+                            android:id="@+id/pic3333"
+                            android:layout_width="164dp"
+                            android:layout_height="164dp"
+                            android:background="@color/white"
+                            android:contentDescription="@string/asdsa01123"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/berserk"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/imageView3242"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:contentDescription="@string/wishlist"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.095"
+                            app:srcCompat="@drawable/btn_3"
+                            app:tint="@color/black"
+                            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/priceTxt34"
+                            android:layout_width="71dp"
+                            android:layout_height="39dp"
+                            android:contentDescription="@string/pricetxt"
+                            android:text="$50"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.614"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.081"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+                        <TextView
+                            android:id="@+id/titleTx33t5"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+
+                            android:text="Title:Berserk"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.839"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.341"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/titleTxt23325"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/titletxt"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="violently or destructively frenzied; wild; crazed; deranged: He suddenly went berserk."
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.988"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.745"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/narutoCardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="347dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="naruto">
+
+                        <ImageView
+                            android:id="@+id/NarutoCover"
+                            android:layout_width="164dp"
+                            android:layout_height="164dp"
+                            android:background="#FDFDFD"
+                            android:contentDescription="@string/asdsa01123"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/naruto"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/narutoWishlist"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:contentDescription="@string/wishlist"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.095"
+                            app:srcCompat="@drawable/btn_3"
+                            app:tint="@color/black"
+                            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/Narutoprice"
+                            android:layout_width="71dp"
+                            android:layout_height="39dp"
+                            android:contentDescription="@string/pricetxt"
+                            android:text="$69"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.614"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.081"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                        <TextView
+                            android:id="@+id/naruto"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+
+                            android:text="Title:Naruto"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.322"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/narutoDescription"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/titletxt"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="is a ninja-in-training whose wild antics amuse his teammates. But he's completely serious about one thing: becoming the world's greatest ninja! As the battle against the Tailed Beast-targeting Akatsuki rages on, the heroic sibling battle between Sasuke and Itachi eventually concludes"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.953"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.904"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="412dp"
+        android:layout_height="58dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="#020202">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:id="@+id/exploreLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/explore1"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_1" />
+
+                    <TextView
+                        android:id="@+id/explore2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="explorer"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cartLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/cart"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_2" />
+
+                    <TextView
+                        android:id="@+id/cart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="cart"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/wishlistLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/wishlist"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_3" />
+
+                    <TextView
+                        android:id="@+id/wishlist2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wishlist"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/myOrderLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/myOrder"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_4" />
+
+                    <TextView
+                        android:id="@+id/myOrder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="My Order"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/profileLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/profile"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_5" />
+
+                    <TextView
+                        android:id="@+id/profile2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
